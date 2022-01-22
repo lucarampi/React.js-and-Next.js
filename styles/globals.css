@@ -1,9 +1,27 @@
 html,
-body {
+body{
+  background-color:lightgray;
+  display: grid;
+  place-items: center;
+  grid-template-rows: 1fr;
+  height: 100%;
+  width: 100%;
   padding: 0;
   margin: 0;
   font-family: -apple-system, BlinkMacSystemFont, Segoe UI, Roboto, Oxygen,
     Ubuntu, Cantarell, Fira Sans, Droid Sans, Helvetica Neue, sans-serif;
+}
+
+.adaptative-content{
+  display: "flex";
+  flex-direction: "column";
+  justify-content: "center";
+  align-items: "center";
+  margin: "0 auto";
+  padding: "5px";
+  border: "1px solid black";
+  width: "fit-content";
+  background-color: "white";
 }
 
 a {
@@ -13,4 +31,61 @@ a {
 
 * {
   box-sizing: border-box;
+}
+
+#__next {
+  width: 100%;
+}
+
+.lightblue {
+  background-color:lightblue;
+}
+
+.lightpink {
+  background-color: lightpink;
+}
+
+.specialButton {
+  outline: none !important;
+  border: none;
+  background: 0 0;
+}
+
+.mainDiv {
+  width: 100%;
+  display: block;
+  position: relative;
+  z-index: 1;
+  border-radius: 25px;
+  overflow: hidden;
+  margin: 0 auto;
+  box-shadow: 0 5px 30px 0 rgb(3 216 222 / 20%);
+}
+
+.myDiv {
+  position: absolute;
+  z-index: -1;
+  width: 300%;
+  height: 100%;
+  background: #a64bf4;
+  background: linear-gradient(to right, #00dbde, #fc00ff, #00dbde, #fc00ff);
+  top: 0;
+  left: -100%;
+  transition: all .4s;
+}
+
+.mainDiv:hover .myDiv {
+  left: 0%;
+}
+
+.myButton {
+  font-size: 16px;
+  color: #fff;
+  line-height: 1.2;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 0 20px;
+  width: 100%;
+  height: 50px;
 }
